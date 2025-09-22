@@ -29,6 +29,8 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+/* Ant Design */
+
 .ant-select {
   background-color: transparent !important;
 }
@@ -70,4 +72,14 @@ a {
 .ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
   background-color: #410caa !important; 
   color: black !important;                
+}
+
+/* Swiper */
+
+.swiper-pagination-bullet {
+  background-color: rgba(255,255,255,0.5) !important; /* обычные точки */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c816fa !important; /* активная точка */
 }

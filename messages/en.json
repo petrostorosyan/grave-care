@@ -28,6 +28,9 @@
         "title": "Photo report",
         "description": "After each visit – photo"
       }
+    },
+    "ourWork": {
+      "title": "Our Work"
     }
   }
 }
