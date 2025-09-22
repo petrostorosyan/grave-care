@@ -1,26 +1,73 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+* {
+  outline: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  &:-webkit-autofill,
+  &:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s !important;
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ant-select {
+  background-color: transparent !important;
+}
+
+.ant-select .ant-select-selector {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  transition: border-color 0.3s;
+}
+
+.ant-select .ant-select-selector:hover {
+  border-color: #c816fa !important;
+}
+
+.ant-select.ant-select-open .ant-select-selector {
+  border-color: #c816fa !important; 
+}
+
+.ant-select .ant-select-arrow {
+  color: white; 
+}
+
+.ant-select-item-option {
+  background-color: #27046e; 
+  color: white; 
+}
+
+.ant-select .ant-select-arrow svg {
+  color: white;     
+  fill: white;      
+}
+
+.ant-select-item-option-active,
+.ant-select-item-option:hover {
+  background-color: #410caa !important;
+  color: black !important;
+}
+
+.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #410caa !important; 
+  color: black !important;                
 }
