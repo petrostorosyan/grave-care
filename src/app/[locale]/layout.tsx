@@ -4,11 +4,11 @@ import { routing } from "@/i18n/routing";
 import { setRequestLocale } from "next-intl/server";
 import type { Metadata } from "next";
 import "../globals.css";
-import { Lora } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Suspense } from "react";
+import { Lora } from "next/font/google";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -44,7 +44,7 @@ export default async function RootLayout({
       <body className={`${lora.variable}`}>
         <NextIntlClientProvider>
           <AntdRegistry>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<div className="w-full h-[100px] border border-red-500">Loading...</div>}>
               <Header />
             </Suspense>
             {children}

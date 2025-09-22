@@ -4,5 +4,30 @@
   "home": "Home",
   "login": "Login",
   "register": "Register",
-  "services": "Services"
+  "services": "Services",
+  "homePage": {
+    "hero": {
+       "title": "Caring for the memory of your loved ones",
+       "description": "Care of burial sites, flowers and cleanliness all year round.",
+       "order": "Order care"
+    }, 
+    "services": {
+      "cleaningMonuments": {
+        "title": "Cleaning of monuments",
+        "description": "Polishing, removing dirt and dust"
+      },
+      "flowerCare": {
+        "title": "Flower care",
+        "description": "Fresh flowers, replacement of wreaths"
+      },
+      "weedRemoval": {
+        "title": "Weed removal",
+        "description": "Maintain a neat appearance"
+      },
+      "photoReport": {
+        "title": "Photo report",
+        "description": "After each visit – photo"
+      }
+    }
+  }
 }
