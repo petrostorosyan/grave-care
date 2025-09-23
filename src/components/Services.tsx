@@ -18,7 +18,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="px-[50px] py-[30px] text-center">
+    <section className="px-[50px] py-[30px] mb-[80px] text-center">
       <div className="text-[32px] font-bold mb-[80px]">
         <ScrollFloat
           animationDuration={1}
@@ -30,10 +30,6 @@ const Services = () => {
           {tCommon("services")}
         </ScrollFloat>
       </div>
-
-      {/* <h2 className="text-[32px] font-bold mb-[80px]">{tCommon("services")}</h2> */}
-
-      {/* <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(250px,1fr))]"> */}
       <div className="w-full flex justify-center items-center">
         <div className="w-[1200px] flex flex-wrap justify-center items-center gap-[70px]">
           {services.map((service) => (

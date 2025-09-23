@@ -18,27 +18,27 @@ interface ICarousel {
 const carouselData: ICarousel[] = [
   {
     id: 1,
-    src: "/images/our-work/1.jpg",
+    src: "/images/our-work/1.webp",
     alt: "one",
   },
   {
     id: 2,
-    src: "/images/our-work/2.jpg",
+    src: "/images/our-work/2.webp",
     alt: "two",
   },
   {
     id: 3,
-    src: "/images/our-work/3.jpg",
+    src: "/images/our-work/3.webp",
     alt: "three",
   },
   {
     id: 4,
-    src: "/images/our-work/4.jpg",
+    src: "/images/our-work/4.webp",
     alt: "four",
   },
   {
     id: 5,
-    src: "/images/our-work/5.jpg",
+    src: "/images/our-work/5.webp",
     alt: "five",
   },
 ];

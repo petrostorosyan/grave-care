@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import { Suspense } from "react";
+import { Spin } from 'antd';
 import { Lora } from "next/font/google";
 
 const lora = Lora({
@@ -44,7 +45,7 @@ export default async function RootLayout({
       <body className={`${lora.variable}`}>
         <NextIntlClientProvider>
           <AntdRegistry>
-            <Suspense fallback={<div className="w-full h-[100px] border border-red-500">Loading...</div>}>
+            <Suspense fallback={<div className="w-full h-[100px] flex justify-center"><Spin /></div>}>
               <Header />
             </Suspense>
             {children}

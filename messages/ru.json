@@ -5,6 +5,9 @@
   "login": "Вход",
   "register": "Регистрация",
   "services": "Услуги",
+  "packages": "Пакеты",
+  "menu": "Меню",
+  "price": "Цена",
   "homePage": {
     "hero": {
       "title": "Забота о памяти ваших близких",
@@ -31,6 +34,26 @@
     },
     "ourWork": {
       "title": "Наша работа"
+    },
+    "packages": {
+      "title": "Пакеты",
+      "choose": "Выбрать",
+      "oneTimeVisit": {
+        "title": "Разовое посещение",
+        "description": "Чистка, цветы, фотоотчёт."
+      },
+      "monthlyCare": {
+        "title": "Ежемесячный уход",
+        "description": "Регулярный уход 1 раз в месяц"
+      },
+      "yearlyPackage": {
+        "title": "Годовой пакет",
+        "description": "Полный уход круглый год"
+      }
     }
+  },
+  "footer": {
+    "allRights": "Все права защищены",
+    "socials": "Социальные сети"
   }
 }

@@ -1,10 +1,13 @@
 {
-  "about": "About",
+  "about": "About Us",
   "contacts": "Contacts",
   "home": "Home",
   "login": "Login",
   "register": "Register",
   "services": "Services",
+  "packages": "Packages",
+  "menu": "Menu",
+  "price": "Price",
   "homePage": {
     "hero": {
        "title": "Caring for the memory of your loved ones",
@@ -31,6 +34,26 @@
     },
     "ourWork": {
       "title": "Our Work"
+    },
+    "packages": {
+      "title": "Packages",
+      "choose": "Choose",
+      "oneTimeVisit": {
+        "title": "One-time visit",
+        "description": "Cleaning, flowers, photo report"
+      },
+      "monthlyCare": {
+        "title": "Monthly care",
+        "description": "Regular care once a month"
+      },
+      "yearlyPackage": {
+        "title": "Yearly package",
+        "description": "Complete care all year round"
+      }
     }
+  },
+  "footer": {
+    "allRights": "All Rigts Reserved",
+    "socials": "Socials"
   }
 }
