@@ -45,7 +45,7 @@ const currentCurrency = currencyMap[locale] ?? "֏";
   ];
 
   return (
-    <div className="w-full mb-[80px] px-[50px] py-[30px] flex flex-col justify-center items-center">
+    <div id="packages" className="w-full mb-[80px] px-[50px] py-[30px] flex flex-col justify-center items-center">
       <div className="text-[32px] font-bold mb-[80px]">
         <ScrollFloat
           animationDuration={1}

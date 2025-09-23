@@ -1,15 +1,17 @@
 "use client";
 
-import { Link } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { useEffect } from "react";
 
-interface IMenu {
+interface IFooterMenu {
   id: number;
   label: string;
   link: string;
+  scrollTo?:string
 }
 
-const menu: IMenu[] = [
+const menu: IFooterMenu[] = [
   {
     id: 1,
     label: "home",
@@ -18,21 +20,23 @@ const menu: IMenu[] = [
   {
     id: 2,
     label: "services",
-    link: "/",
+    link: "/services",
+    scrollTo: "services"
   },
   {
     id: 3,
     label: "packages",
-    link: "/",
+    link: "/packages",
+    scrollTo: "packages"
   },
   {
     id: 4,
     label: "about",
-    link: "/",
+    link: "/about",
   },
 ];
 
-const socials: IMenu[] = [
+const socials: IFooterMenu[] = [
   {
     id: 1,
     label: "Facebook",
@@ -52,9 +56,37 @@ const socials: IMenu[] = [
 
 const FooterMenu = () => {
   const t = useTranslations();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleScrollToSection = (id: any) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      const offsetTop = section.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: offsetTop - 50, behavior: "smooth" });
+    } else {
+      sessionStorage.setItem("scrollToId", id);
+      router.push("/");
+    }
+  };
+
+  useEffect(() => {
+    const scrollToId = sessionStorage.getItem("scrollToId");
+    if (scrollToId && pathname === "/") {
+      sessionStorage.removeItem("scrollToId");
+      const el = document.getElementById(scrollToId);
+      if (el) {
+        setTimeout(() => {
+          const offsetTop = el.getBoundingClientRect().top + window.scrollY;
+          window.scrollTo({ top: offsetTop - 50, behavior: "smooth" });
+        }, 300);
+      }
+    }
+  }, [pathname]);
 
   return (
-    <div className="w-full flex justify-between">
+    <div className="w-full flex justify-between mb-[50px]">
       <div>
         <p className="text-[24px] text-[#313236] mb-[10px] font-bold">
           {t("menu")}
@@ -66,6 +98,10 @@ const FooterMenu = () => {
                 key={menuItem.id}
                 href={menuItem.link}
                 className="hover:text-[#c816fa] transition duration-500 cursor-pointer mb-[5px]"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollToSection(menuItem.scrollTo);
+                }}
               >
                 {t(menuItem.label)}
               </Link>
@@ -99,13 +135,13 @@ const FooterMenu = () => {
         </p>
         <a
           href="#"
-          className="hover:text-[#c816fa] transition duration-500 cursor-pointer mb-[5px]"
+          className="hover:text-[#c816fa] text-[18px] transition duration-500 cursor-pointer mb-[5px]"
         >
           info@gmail.com
         </a>
         <a
           href="#"
-          className="hover:text-[#c816fa] transition duration-500 cursor-pointer"
+          className="hover:text-[#c816fa] text-[18px]  transition duration-500 cursor-pointer"
         >
           +374 77 xx xx xx
         </a>

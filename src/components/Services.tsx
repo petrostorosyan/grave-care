@@ -18,7 +18,7 @@ const Services = () => {
   ];
 
   return (
-    <section className="px-[50px] py-[30px] mb-[80px] text-center">
+    <section id="services" className="px-[50px] py-[30px] mb-[80px] text-center">
       <div className="text-[32px] font-bold mb-[80px]">
         <ScrollFloat
           animationDuration={1}
