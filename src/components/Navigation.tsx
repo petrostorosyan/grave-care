@@ -12,8 +12,6 @@ const Navigation = () => {
   const params = useSearchParams();
   const navbarRef = useRef<HTMLDivElement>(null);
 
-  const t = useTranslations();
-
   useEffect(() => {
     const navbar = navbarRef.current;
     let prevScrollPos = window.scrollY;

@@ -24,7 +24,9 @@ export default function Navbar() {
 
   const isActive = (href: string): boolean => pathname === href;
 
-  const handleScrollToSection = (id: any) => {
+  const handleScrollToSection = (id?: string) => {
+    if (!id) return;
+    
     const section = document.getElementById(id);
 
     if (section) {

@@ -59,7 +59,9 @@ const FooterMenu = () => {
   const pathname = usePathname();
   const router = useRouter();
 
-  const handleScrollToSection = (id: any) => {
+   const handleScrollToSection = (id?: string) => {
+    if (!id) return;
+    
     const section = document.getElementById(id);
 
     if (section) {
