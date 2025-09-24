@@ -4,7 +4,6 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import LocaleSwitcher from "./LocaleSwitcher";
-import { useTranslations } from "next-intl";
 import AuthButtons from "./AuthButtons";
 
 const Navigation = () => {

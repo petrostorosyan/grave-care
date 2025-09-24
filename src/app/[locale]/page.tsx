@@ -4,6 +4,7 @@ import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import OurWork from '@/components/OurWork';
 import Packages from '@/components/Packages';
+import Faq from '@/shared/Faq';
 
 export default function Home({params}: {params: Promise<{locale:string}>}) {
   const { locale } = use(params);
@@ -15,6 +16,7 @@ export default function Home({params}: {params: Promise<{locale:string}>}) {
       <Services />
       <OurWork />
       <Packages />
+      <Faq />
     </main>
   );
 }

@@ -55,5 +55,40 @@
   "footer": {
     "allRights": "All Rigts Reserved",
     "socials": "Socials"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "faqOne": {
+      "title": "What is included in a standard cleaning?",
+      "description": "We clean the memorial stone from dirt, dust and moss, remove weeds around it, sweep the territory and install live or artificial flowers (your choice)."
+    },
+    "faqTwo": {
+      "title": "Do you provide a photo report?",
+      "description": "Yes, after each service we send a photo or video report so you can be confident in the work done."
+    },
+    "faqThree": {
+      "title": "How often can I order service?",
+      "description": "You can book a one-time visit or choose a package (monthly or yearly care)."
+    },
+    "faqFour": {
+      "title": "What additional services are available?",
+      "description": "We offer candle replacement, inscription restoration, tile repair, and monument polishing."
+    },
+    "faqFive": {
+      "title": "Can I order care if I live in another country?",
+      "description": "Of course. Everything can be completed online, and you will receive confirmation and a photo report via email or WhatsApp."
+    },
+    "faqSix": {
+      "title": "How much does the service cost?",
+      "description": "The price depends on the package: a one-time visit, monthly care, or an annual subscription. Detailed rates are listed on the website in the 'Packages' section."
+    },
+    "faqSeven": {
+      "title": "How does payment work?",
+      "description": "Payment can be made by bank card online, by bank transfer or in cash (if you order on site)."
+    },
+    "faqEight": {
+      "title": "Is it possible to order individual conditions?",
+      "description": "Yes, if you have special requests (for example, regular flowers on certain dates), we will create a personal care plan."
+    }
   }
 }

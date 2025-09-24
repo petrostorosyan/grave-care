@@ -46,21 +46,21 @@ a {
 }
 
 .ant-select.ant-select-open .ant-select-selector {
-  border-color: #c816fa !important; 
+  border-color: #c816fa !important;
 }
 
 .ant-select .ant-select-arrow {
-  color: white; 
+  color: white;
 }
 
 .ant-select-item-option {
-  background-color: #27046e; 
-  color: white; 
+  background-color: #27046e;
+  color: white;
 }
 
 .ant-select .ant-select-arrow svg {
-  color: white;     
-  fill: white;      
+  color: white;
+  fill: white;
 }
 
 .ant-select-item-option-active,
@@ -69,17 +69,32 @@ a {
   color: black !important;
 }
 
-.ant-select-dropdown .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
-  background-color: #410caa !important; 
-  color: black !important;                
+.ant-select-dropdown
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background-color: #410caa !important;
+  color: black !important;
+}
+
+.css-dev-only-do-not-override-1odpy5d.ant-collapse > .ant-collapse-item {
+  border-bottom: 1px solid #313236 !important;
+}
+
+:where(.css-dev-only-do-not-override-1odpy5d).ant-collapse
+  .ant-collapse-content {
+  border-top-color: unset !important;
+}
+
+.ant-collapse-content-box {
+  background-color: transparent !important;
+  padding: 0 !important;
 }
 
 /* Swiper */
 
 .swiper-pagination-bullet {
-  background-color: rgba(255,255,255,0.5) !important; /* обычные точки */
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #c816fa !important; /* активная точка */
+  background-color: #c816fa !important;
 }
