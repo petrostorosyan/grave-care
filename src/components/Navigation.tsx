@@ -5,6 +5,8 @@ import { useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import LocaleSwitcher from "./LocaleSwitcher";
 import AuthButtons from "./AuthButtons";
+import Logo from "@/shared/Logo";
+import { PhoneOutlined } from "@ant-design/icons";
 
 const Navigation = () => {
   const path = usePathname();
@@ -50,9 +52,10 @@ const Navigation = () => {
         hover:shadow-[0_3px_10px_0_rgba(31,31,31,0.14)]
         hover:border-[#dadce0]"
     >
-      <span className="mr-[30px]">logo</span>
+      <Logo />
       <Navbar />
       <AuthButtons />
+      <a href="tel:+37477xxxxxx"><PhoneOutlined className="text-[20px] hover:!text-[#c816fa] transition duration-500" /></a>
       <LocaleSwitcher />   
     </div>
   );

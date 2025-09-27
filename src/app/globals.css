@@ -31,26 +31,12 @@ a {
 
 /* Ant Design */
 
-.ant-select {
-  background-color: transparent !important;
-}
-
-.ant-select .ant-select-selector {
-  background-color: transparent !important;
-  box-shadow: none !important;
-  transition: border-color 0.3s;
-}
-
 .ant-select .ant-select-selector:hover {
   border-color: #c816fa !important;
 }
 
 .ant-select.ant-select-open .ant-select-selector {
   border-color: #c816fa !important;
-}
-
-.ant-select .ant-select-arrow {
-  color: white;
 }
 
 .ant-select-item-option {
@@ -81,7 +67,7 @@ a {
 
 :where(.css-dev-only-do-not-override-1odpy5d).ant-collapse
   .ant-collapse-content {
-  border-top-color: unset !important;
+  border-top-color: #313236 !important;
 }
 
 .ant-collapse-content-box {

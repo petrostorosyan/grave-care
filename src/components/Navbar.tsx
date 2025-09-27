@@ -22,7 +22,8 @@ export default function Navbar() {
     { href: "/about", label: "about" },
   ];
 
-  const isActive = (href: string): boolean => pathname === href;
+  // const isActive = (href: string): boolean => pathname === href;
+  // ${isActive(href) ? "text-[#c816fa]" : "text-white-700"}
 
   const handleScrollToSection = (id?: string) => {
     if (!id) return;
@@ -53,14 +54,12 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <nav className="h-full flex gap-[40px] justify-between items-center mr-[100px]">
+    <nav className="h-full flex gap-[40px] justify-between items-center mr-[100px] ml-[50px]">
       {navItems.map(({ href, label, scrollTo }) => (
         <Link
           key={href}
           href={href}
-          className={`hover:text-[#c816fa] transition duration-500 transition-colors ${
-            isActive(href) ? "text-[#c816fa]" : "text-white-700"
-          }`}
+          className="hover:text-[#c816fa] transition duration-500 transition-colors"
           onClick={(e) => {
             e.preventDefault();
             handleScrollToSection(scrollTo);
