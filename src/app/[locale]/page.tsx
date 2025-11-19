@@ -13,8 +13,8 @@ export default function Home({params}: {params: Promise<{locale:string}>}) {
   return (
     <main className="w-full">
       <Hero />
-      {/* <Services />
-      <OurWork />
+      <Services />
+      {/* <OurWork />
       <Packages />
       <Faq /> */}
     </main>

@@ -1,4 +1,4 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 // import DarkVeil from "./DarkVeil";
 import { Button } from "antd";
 import BlurText from "./Blurtext";
@@ -7,26 +7,33 @@ import Plasma from "./Plasma";
 
 const Hero = () => {
   const t = useTranslations("homePage.hero");
+  const locale = useLocale(); 
 
   return (
     <section className="w-full h-screen relative">
       {/* <DarkVeil /> */}
       <Plasma />
-      <div className="w-full text-white p-[50px] absolute top-[30%] flex justify-center items-center flex-col">
-        <BlurText
-          text={t("title")}
-          delay={150}
-          animateBy="words"
-          direction="top"
-          className="text-[62px] font-bold mb-[40px] text-center"
-        />
-        <BlurText
-          text={t("description")}
-          delay={150}
-          animateBy="words"
-          direction="top"
-          className="text-[32px] font-bold mb-[80px] text-center"
-        />
+      <div className="w-full text-white p-[50px] absolute top-[25%] flex justify-center items-center flex-col 
+          max-[650px]:p-[30px] max-[430px]:p-[15px]">
+          <BlurText
+            text={t("title")}
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className={`${locale == "ru" ? "w-[1000px]" : "w-[1030px]"} text-[clamp(1.6rem,3vw+0.5rem,3.8rem)]
+             font-bold mb-[40px] text-center transition-all duration-500 
+            max-[1200px]:w-[750px] max-[930px]:w-[600px] max-[650px]:w-[100%]`}
+          />
+
+          <BlurText
+            text={t("description")}
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className="w-[900px] text-[clamp(1rem,2vw+0.5rem,2rem)] font-bold mb-[80px] text-center transition-all 
+            duration-500 max-[1200px]:w-[750px] max-[930px]:w-[600px] max-[650px]:w-[100%]"
+          />
+
         <AnimatedContent
           distance={100}
           direction="vertical"

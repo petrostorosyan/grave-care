@@ -11,6 +11,7 @@ import Logo from "@/shared/Logo";
 import { FaFacebook } from "react-icons/fa6";
 import { LuInstagram } from "react-icons/lu";
 import { Divider } from 'antd';
+import MobileLocaleSwitcher from "./MobileLocaleSwitcher";
 // import SocialsMenu from "./socialsMenu/SocialsMenu";
 
 const MobileMenu = () => {
@@ -75,10 +76,11 @@ const MobileMenu = () => {
           ))}
         </nav>
         <Divider size="middle" />
-        <div className="min-h-[10px] border border-[red] flex justify-start align-center gap-[15px]">
+        <div className="min-h-[10px] mb-[20px] flex justify-start align-center gap-[20px]">
           <FaFacebook size={26} color="#8B3BFB" />
           <LuInstagram size={26} color="#8B3BFB" />
         </div>
+        <MobileLocaleSwitcher />
       </Drawer>
     </>
   );
