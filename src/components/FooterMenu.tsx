@@ -99,7 +99,7 @@ const FooterMenu = () => {
               <Link
                 key={menuItem.id}
                 href={menuItem.link}
-                className="hover:text-[#c816fa] transition duration-500 cursor-pointer mb-[5px]"
+                className="hover:text-[#410caa] transition duration-500 cursor-pointer mb-[5px]"
                 onClick={(e) => {
                   e.preventDefault();
                   handleScrollToSection(menuItem.scrollTo);
@@ -122,7 +122,7 @@ const FooterMenu = () => {
               <a
                 key={social.id}
                 href={social.link}
-                className="hover:text-[#c816fa] transition duration-500 cursor-pointer mb-[5px]"
+                className="hover:text-[#410caa] transition duration-500 cursor-pointer mb-[5px]"
               >
                 {social.label}
               </a>
@@ -137,13 +137,13 @@ const FooterMenu = () => {
         </p>
         <a
           href="#"
-          className="hover:text-[#c816fa] text-[18px] transition duration-500 cursor-pointer mb-[5px]"
+          className="hover:text-[#410caa] text-[18px] transition duration-500 cursor-pointer mb-[5px]"
         >
           info@gmail.com
         </a>
         <a
           href="#"
-          className="hover:text-[#c816fa] text-[18px]  transition duration-500 cursor-pointer"
+          className="hover:text-[#410caa] text-[18px]  transition duration-500 cursor-pointer"
         >
           +374 77 xx xx xx
         </a>

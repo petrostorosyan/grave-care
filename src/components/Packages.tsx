@@ -79,7 +79,7 @@ const currentCurrency = currencyMap[locale] ?? "֏";
                   <div className="w-full mt-[40px] flex justify-between">
                     <p>{`${tPrice("price")}: ${item.price}${currentCurrency}`}</p>
                     <Button
-                      className="!bg-[transparent] !text-white transition duration-500 hover:!text-[#c816fa] border !border-[#c816fa]"
+                      className="!bg-[transparent] !text-white transition duration-500 border !border-[#410caa]"
                       variant="solid"
                     >
                       {t("choose")}

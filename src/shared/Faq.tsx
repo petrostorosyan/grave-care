@@ -56,7 +56,7 @@ const items: CollapseProps["items"] = [
 
   return (
     <section
-      id="services"
+      id="faq"
       className="px-[50px] py-[30px] mb-[80px] text-center"
     >
       <div className="text-[32px] font-bold mb-[80px]">

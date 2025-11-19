@@ -9,7 +9,7 @@ const FooterRights = () => {
           <div className="text-[16px]">
             © {currentYear} Grave Care. {t("allRights")}
           </div>
-          <p className="hover:text-[#c816fa] transition duration-500 cursor-pointer">
+          <p className="hover:text-[#410caa] transition duration-500 cursor-pointer">
             Privacy Policy
           </p>
         </div>

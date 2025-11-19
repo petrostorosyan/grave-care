@@ -70,7 +70,7 @@ const OurWork = () => {
             renderBullet: (index, className) => {
               return `<span class="${className}" style="background-color: ${
                 className.includes("swiper-pagination-bullet-active")
-                  ? "#c816fa"
+                  ? "#410caa"
                   : "rgba(255,255,255,0.5)"
               }"></span>`;
             },

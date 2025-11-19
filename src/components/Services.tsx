@@ -39,10 +39,10 @@ const Services = () => {
               spotlightColor="rgba(39, 4, 110, 1)"
             >
               <div className="w-[550px] h-[250px] p-[30px] flex flex-col justify-center items-center rounded-xl transition-transform duration-200 hover:-translate-y-1 group">
-                <h3 className="text-[28px] group-hover:text-[#c816fa] font-semibold mb-[20px]">
+                <h3 className="text-[28px] group-hover:text-[#410caa] font-semibold mb-[20px]">
                   {t(service.title)}
                 </h3>
-                <p className="group-hover:text-[#c816fa] transition-colors duration-500">
+                <p className="group-hover:text-[#410caa] transition-colors duration-500">
                   {t(service.desc)}
                 </p>
               </div>
