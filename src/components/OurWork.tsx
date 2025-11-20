@@ -46,9 +46,9 @@ const OurWork = () => {
   const t = useTranslations("homePage.ourWork");
 
   return (
-    <section className="w-full mb-[80px] px-[50px] py-[30px] flex flex-col justify-center items-center
-    max-[1100px]:p-[30px] max-[520px]:p-[20px] max-[450px]:p-[15px]">
-      <div className="text-[32px] font-bold mb-[80px] transition duration-500 max-[680px]:mb-[40px] max-[520px]:mb-[25px]
+    <section className="w-full mb-[80px] px-[50px] py-[30px] flex flex-col justify-center items-center transition-all duration-500
+    max-[1100px]:p-[30px] max-[520px]:p-[20px] max-[450px]:p-[15px] max-[450px]:mb-[50px]">
+      <div className="text-[32px] font-bold mb-[80px] transition duration-500 max-[880px]:mb-[40px] max-[520px]:mb-[25px]
       max-[520px]:text-[24px] max-[450px]:text-[20px]">
         <ScrollFloat
           animationDuration={1}
