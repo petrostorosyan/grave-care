@@ -43,11 +43,13 @@ const carouselData: ICarousel[] = [
 ];
 
 const OurWork = () => {
-    const t = useTranslations("homePage.ourWork");
+  const t = useTranslations("homePage.ourWork");
 
   return (
-    <section className="w-full mb-[80px] px-[50px] py-[30px] flex flex-col justify-center items-center">
-      <div className="text-[32px] font-bold mb-[80px]">
+    <section className="w-full mb-[80px] px-[50px] py-[30px] flex flex-col justify-center items-center
+    max-[1100px]:p-[30px] max-[520px]:p-[20px] max-[450px]:p-[15px]">
+      <div className="text-[32px] font-bold mb-[80px] transition duration-500 max-[680px]:mb-[40px] max-[520px]:mb-[25px]
+      max-[520px]:text-[24px] max-[450px]:text-[20px]">
         <ScrollFloat
           animationDuration={1}
           ease="back.inOut(2)"
@@ -59,7 +61,10 @@ const OurWork = () => {
         </ScrollFloat>
       </div>
 
-      <div className="w-[1000px] h-[400px] flex justify-center rounded-[6px]">
+      <div className="w-[1000px] h-[400px] flex justify-center rounded-[6px] transition duration-500
+          max-[1100px]:w-[800px] max-[1100px]:h-[300px] max-[880px]:w-[600px] max-[880px]:h-[240px]
+          max-[680px]:w-[450px] max-[680px]:h-[200px] max-[520px]:w-[400px] max-[520px]:h-[180px]
+          max-[450px]:w-[320px] max-[450px]:h-[150px]">
         <Swiper
           slidesPerView={1}
           spaceBetween={30}

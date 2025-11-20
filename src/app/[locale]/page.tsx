@@ -14,9 +14,9 @@ export default function Home({params}: {params: Promise<{locale:string}>}) {
     <main className="w-full">
       <Hero />
       <Services />
-      {/* <OurWork />
-      <Packages />
-      <Faq /> */}
+      <OurWork />
+      {/* <Packages /> */}
+      {/* <Faq /> */}
     </main>
   );
 }
