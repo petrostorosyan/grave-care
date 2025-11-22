@@ -16,7 +16,7 @@ export default function Home({params}: {params: Promise<{locale:string}>}) {
       <Services />
       <OurWork />
       <Packages />
-      {/* <Faq /> */}
+      <Faq />
     </main>
   );
 }

@@ -7,57 +7,77 @@ import { Collapse } from "antd";
 import { RightOutlined } from "@ant-design/icons";
 import { useTranslations } from "next-intl";
 
+const itemTitleStyle =
+  "text-white text-[18px] text-center transition-all duration-500 max-[800px]:text-[16px] max-[500px]:text-[14px]";
+const itemDescriptionStyle =
+  "bg-[#212226] m-0 text-white text-[16px] p-[20px] max-[800px]:text-[15px] max-[500px]:text-[13px]";
 
 const Faq = () => {
-const t = useTranslations("faq");
+  const t = useTranslations("faq");
 
-const items: CollapseProps["items"] = [
-  {
-    key: "1",
-    label: <span className="text-white text-[18px]">{t("faqOne.title")}</span>,
-    children: <p className="bg-[#212226] m-0 text-white text-[16px] p-[20px]">{t("faqOne.description")}</p>,
-  },
-  {
-    key: "2",
-    label: <span className="text-white text-[18px]">{t("faqTwo.title")}</span>,
-    children: <p className="bg-[#212226] m-0 text-white text-[16px] p-[20px]">{t("faqTwo.description")}</p>,
-  },
-  {
-    key: "3",
-    label: <span className="text-white text-[18px]">{t("faqThree.title")}</span>,
-    children: <p className="bg-[#212226] m-0 text-white text-[16px] p-[20px]">{t("faqThree.description")}</p>,
-  },
-  {
-    key: "4",
-    label: <span className="text-white text-[18px]">{t("faqFour.title")}</span>,
-    children: <p className="bg-[#212226] m-0 text-white text-[16px] p-[20px]">{t("faqFour.description")}</p>,
-  },
-  {
-    key: "5",
-    label: <span className="text-white text-[18px]">{t("faqFive.title")}</span>,
-    children: <p className="bg-[#212226] m-0 text-white text-[16px] p-[20px]">{t("faqFive.description")}</p>,
-  },
-  {
-    key: "6",
-    label: <span className="text-white text-[18px]">{t("faqSix.title")}</span>,
-    children: <p className="bg-[#212226] m-0 text-white text-[16px] p-[20px]">{t("faqSix.description")}</p>,
-  },
-  {
-    key: "7",
-    label: <span className="text-white text-[18px]">{t("faqSeven.title")}</span>,
-    children: <p className="bg-[#212226] m-0 text-white text-[16px] p-[20px]">{t("faqSeven.description")}</p>,
-  },
-  {
-    key: "8",
-    label: <span className="text-white text-[18px]">{t("faqEight.title")}</span>,
-    children: <p className="bg-[#212226] m-0 text-white text-[16px] p-[20px]">{t("faqEight.description")}</p>,
-  },
-];
+  const items: CollapseProps["items"] = [
+    {
+      key: "1",
+      label: <span className={itemTitleStyle}>{t("faqOne.title")}</span>,
+      children: (
+        <p className={itemDescriptionStyle}>{t("faqOne.description")}</p>
+      ),
+    },
+    {
+      key: "2",
+      label: <span className={itemTitleStyle}>{t("faqTwo.title")}</span>,
+      children: (
+        <p className={itemDescriptionStyle}>{t("faqTwo.description")}</p>
+      ),
+    },
+    {
+      key: "3",
+      label: <span className={itemTitleStyle}>{t("faqThree.title")}</span>,
+      children: (
+        <p className={itemDescriptionStyle}>{t("faqThree.description")}</p>
+      ),
+    },
+    {
+      key: "4",
+      label: <span className={itemTitleStyle}>{t("faqFour.title")}</span>,
+      children: (
+        <p className={itemDescriptionStyle}>{t("faqFour.description")}</p>
+      ),
+    },
+    {
+      key: "5",
+      label: <span className={itemTitleStyle}>{t("faqFive.title")}</span>,
+      children: (
+        <p className={itemDescriptionStyle}>{t("faqFive.description")}</p>
+      ),
+    },
+    {
+      key: "6",
+      label: <span className={itemTitleStyle}>{t("faqSix.title")}</span>,
+      children: (
+        <p className={itemDescriptionStyle}>{t("faqSix.description")}</p>
+      ),
+    },
+    {
+      key: "7",
+      label: <span className={itemTitleStyle}>{t("faqSeven.title")}</span>,
+      children: (
+        <p className={itemDescriptionStyle}>{t("faqSeven.description")}</p>
+      ),
+    },
+    {
+      key: "8",
+      label: <span className={itemTitleStyle}>{t("faqEight.title")}</span>,
+      children: (
+        <p className={itemDescriptionStyle}>{t("faqEight.description")}</p>
+      ),
+    },
+  ];
 
   return (
     <section
       id="faq"
-      className="px-[50px] py-[30px] mb-[80px] text-center"
+      className="px-[50px] py-[30px] mb-[80px] text-center transition-all duration-500 max-[600px]:p-[20px] max-[430px]:p-[15px]"
     >
       <div className="text-[32px] font-bold mb-[80px]">
         <ScrollFloat
@@ -72,12 +92,18 @@ const items: CollapseProps["items"] = [
       </div>
 
       <div className="w-full flex justify-center items-center">
-        <div className="w-[1200px] flex flex-wrap justify-center items-center gap-[70px]">
+        <div
+          className="w-[1200px] flex flex-wrap justify-center items-center gap-[70px] transition-all duration-500
+        max-[1300px]:w-[900px] max-[1000px]:w-[700px] max-[800px]:w-[100%]"
+        >
           <SpotlightCard
-            className="custom-spotlight-card"
+            className="custom-spotlight-card w-[100%]"
             spotlightColor="rgba(39, 4, 110, 1)"
           >
-            <div className="w-[1200px] p-[40px] flex justify-center items-center">
+            <div
+              className="w-[1200px] p-[40px] flex justify-center items-center transition-all duration-500 max-[1300px]:w-[900px]
+              max-[1000px]:w-[700px] max-[800px]:w-[100%] max-[600px]:p-[30px] max-[430px]:p-[20px]"
+            >
               <Collapse
                 className="!w-full border !border-[#313236]"
                 accordion
