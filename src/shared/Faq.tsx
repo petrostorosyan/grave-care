@@ -8,9 +8,9 @@ import { RightOutlined } from "@ant-design/icons";
 import { useTranslations } from "next-intl";
 
 const itemTitleStyle =
-  "text-white text-[18px] text-center transition-all duration-500 max-[800px]:text-[16px] max-[500px]:text-[14px]";
+  `w-[100%] flex text-white text-[18px] text-left transition-all duration-500 max-[800px]:text-[16px] max-[500px]:text-[14px] max-[430px]:text-[13px]`;
 const itemDescriptionStyle =
-  "bg-[#212226] m-0 text-white text-[16px] p-[20px] max-[800px]:text-[15px] max-[500px]:text-[13px]";
+  "bg-[#212226] text-left m-0 text-white text-[16px] p-[20px] max-[800px]:text-[15px] max-[500px]:text-[13px] max-[500px]:p-[10px] max-[430px]:text-[12px]";
 
 const Faq = () => {
   const t = useTranslations("faq");
@@ -79,7 +79,7 @@ const Faq = () => {
       id="faq"
       className="px-[50px] py-[30px] mb-[80px] text-center transition-all duration-500 max-[600px]:p-[20px] max-[430px]:p-[15px]"
     >
-      <div className="text-[32px] font-bold mb-[80px]">
+      <div className="text-[32px] font-bold mb-[80px] max-[600px]:mb-[60px]">
         <ScrollFloat
           animationDuration={1}
           ease="back.inOut(2)"
@@ -93,16 +93,15 @@ const Faq = () => {
 
       <div className="w-full flex justify-center items-center">
         <div
-          className="w-[1200px] flex flex-wrap justify-center items-center gap-[70px] transition-all duration-500
-        max-[1300px]:w-[900px] max-[1000px]:w-[700px] max-[800px]:w-[100%]"
+          className="w-[900px] flex flex-wrap justify-center items-center gap-[70px] transition-all duration-500 max-[1000px]:w-[100%]"
         >
           <SpotlightCard
             className="custom-spotlight-card w-[100%]"
             spotlightColor="rgba(39, 4, 110, 1)"
           >
             <div
-              className="w-[1200px] p-[40px] flex justify-center items-center transition-all duration-500 max-[1300px]:w-[900px]
-              max-[1000px]:w-[700px] max-[800px]:w-[100%] max-[600px]:p-[30px] max-[430px]:p-[20px]"
+              className="w-[900px] p-[40px] flex justify-center items-center transition-all duration-500 
+              max-[1000px]:w-[100%] max-[600px]:p-[30px] max-[430px]:p-[20px]"
             >
               <Collapse
                 className="!w-full border !border-[#313236]"

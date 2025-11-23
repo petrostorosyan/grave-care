@@ -1,14 +1,14 @@
 "use client";
 
-import { Link, usePathname, useRouter } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
-import { useEffect } from "react";
+import { useScrollToSection } from "@/hooks/useScrollToSection";
+import { Link } from "@/i18n/navigation";
+import { useLocale, useTranslations } from "next-intl";
 
 interface IFooterMenu {
   id: number;
   label: string;
   link: string;
-  scrollTo?:string
+  scrollTo?: string;
 }
 
 const menu: IFooterMenu[] = [
@@ -21,13 +21,13 @@ const menu: IFooterMenu[] = [
     id: 2,
     label: "services",
     link: "/services",
-    scrollTo: "services"
+    scrollTo: "services",
   },
   {
     id: 3,
     label: "packages",
     link: "/packages",
-    scrollTo: "packages"
+    scrollTo: "packages",
   },
   {
     id: 4,
@@ -49,51 +49,35 @@ const socials: IFooterMenu[] = [
   },
   {
     id: 3,
-    label: "Tik Tok",
+    label: "X",
     link: "#",
   },
 ];
 
 const FooterMenu = () => {
   const t = useTranslations();
-  const pathname = usePathname();
-  const router = useRouter();
-
-   const handleScrollToSection = (id?: string) => {
-    if (!id) return;
-    
-    const section = document.getElementById(id);
-
-    if (section) {
-      const offsetTop = section.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({ top: offsetTop - 50, behavior: "smooth" });
-    } else {
-      sessionStorage.setItem("scrollToId", id);
-      router.push("/");
-    }
-  };
-
-  useEffect(() => {
-    const scrollToId = sessionStorage.getItem("scrollToId");
-    if (scrollToId && pathname === "/") {
-      sessionStorage.removeItem("scrollToId");
-      const el = document.getElementById(scrollToId);
-      if (el) {
-        setTimeout(() => {
-          const offsetTop = el.getBoundingClientRect().top + window.scrollY;
-          window.scrollTo({ top: offsetTop - 50, behavior: "smooth" });
-        }, 300);
-      }
-    }
-  }, [pathname]);
+  const locale = useLocale();
+  const scrollToSection = useScrollToSection({ offset: 25 });
 
   return (
-    <div className="w-full flex justify-between mb-[50px]">
-      <div>
-        <p className="text-[24px] text-[#313236] mb-[10px] font-bold">
+    <div
+      className="w-full flex justify-between flex-wrap gap-x-[50px] mb-[50px] transition-all duration-500
+      max-[650px]:mb-[30px] max-[480px]:flex-nowrap max-[480px]:flex-col"
+    >
+      <div
+        className={`w-max 
+          ${
+            locale == "hy"
+              ? "max-[660px]:order-3"
+              : locale == "ru"
+              ? "max-[540px]:order-3"
+              : "max-[490px]:order-3"
+          }`}
+      >
+        <p className="text-[24px] text-[#313236] mb-[10px] font-bold max-[430px]:text-[20px]">
           {t("menu")}
         </p>
-        <div className="flex flex-col justify-start items-start">
+        <div className="flex flex-col justify-start items-start max-[800px]:text-[16px]">
           {menu.map((menuItem) => {
             return (
               <Link
@@ -102,7 +86,7 @@ const FooterMenu = () => {
                 className="hover:text-[#410caa] transition duration-500 cursor-pointer mb-[5px]"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleScrollToSection(menuItem.scrollTo);
+                  scrollToSection(menuItem.scrollTo ?? "", menuItem.link);
                 }}
               >
                 {t(menuItem.label)}
@@ -112,11 +96,20 @@ const FooterMenu = () => {
         </div>
       </div>
 
-      <div>
-        <p className="text-[24px] text-[#313236] mb-[10px] font-bold">
+      <div
+        className={`w-max max-[650px]:mb-[30px] 
+        ${
+          locale == "hy"
+            ? "max-[660px]:order-2"
+            : locale == "ru"
+            ? "max-[540px]:order-2"
+            : "max-[490px]:order-2"
+        }`}
+      >
+        <p className="text-[24px] text-[#313236] mb-[10px] font-bold max-[430px]:text-[20px]">
           {t("footer.socials")}
         </p>
-        <div className="flex flex-col justify-start items-start">
+        <div className="flex flex-col justify-start items-start max-[800px]:text-[16px]">
           {socials.map((social) => {
             return (
               <a
@@ -131,19 +124,28 @@ const FooterMenu = () => {
         </div>
       </div>
 
-      <div className="flex flex-col">
-        <p className="text-[24px] text-[#313236] mb-[10px] font-bold">
-          Get In Touch
+      <div
+        className={`flex flex-col w-max max-[650px]:mb-[30px] 
+        ${
+          locale == "hy"
+            ? "max-[660px]:order-1"
+            : locale == "ru"
+            ? "max-[540px]:order-1"
+            : "max-[490px]:order-1"
+        }`}
+      >
+        <p className="text-[24px] text-[#313236] mb-[10px] font-bold max-[430px]:text-[20px]">
+          {t("footer.getInTouch")}
         </p>
         <a
           href="#"
-          className="hover:text-[#410caa] text-[18px] transition duration-500 cursor-pointer mb-[5px]"
+          className="hover:text-[#410caa] text-[18px] transition duration-500 cursor-pointer mb-[5px] max-[800px]:text-[16px]"
         >
           info@gmail.com
         </a>
         <a
           href="#"
-          className="hover:text-[#410caa] text-[18px]  transition duration-500 cursor-pointer"
+          className="hover:text-[#410caa] text-[18px]  transition duration-500 cursor-pointer max-[800px]:text-[16px]"
         >
           +374 77 xx xx xx
         </a>

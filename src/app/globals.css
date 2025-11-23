@@ -61,19 +61,19 @@ a {
   color: black !important;
 }
 
-.css-dev-only-do-not-override-1odpy5d.ant-collapse > .ant-collapse-item {
-  border-bottom: 1px solid #313236 !important;
-}
-
-:where(.css-dev-only-do-not-override-1odpy5d).ant-collapse
-  .ant-collapse-content {
-  border-top-color: #313236 !important;
-}
-
 .ant-collapse-content-box {
   background-color: transparent !important;
   padding: 0 !important;
 }
+
+:where(.ant-collapse) > .ant-collapse-item {
+  border-bottom: 1px solid #313236 !important;
+}
+
+:where(.ant-collapse) .ant-collapse-content {
+   border-top-color: #313236 !important;
+}
+
 
 /* Swiper */
 

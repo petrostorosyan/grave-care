@@ -47,8 +47,8 @@ const Packages = () => {
   return (
     <div
       id="packages"
-      className="w-full mb-[80px] px-[50px] py-[30px] flex flex-col justify-center items-center
-    max-[600]:p-[30px] max-[420]:p-[15px]"
+      className="w-full mb-[80px] px-[50px] py-[30px] flex flex-col justify-center items-center transition-all duration-500
+    max-[600]:p-[30px] max-[420]:p-[15px] max-[420]:mb-[50px]"
     >
       <div className="text-[32px] font-bold mb-[80px] max-[830]:mb-[50px] max-[420]:mb-[30px] transition-all duration-500">
         <ScrollFloat

@@ -49,7 +49,7 @@ export default async function RootLayout({
               <Header />
             </Suspense>
             {children}
-            {/* <Footer /> */}
+            <Footer />
           </AntdRegistry>
         </NextIntlClientProvider>
       </body>

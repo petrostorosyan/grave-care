@@ -55,7 +55,9 @@
   },
   "footer": {
     "allRights": "All Rigts Reserved",
-    "socials": "Socials"
+    "socials": "Socials",
+    "getInTouch": "Get In Touch",
+    "privacyPolicy": "Privacy Policy"
   },
   "faq": {
     "title": "Frequently Asked Questions",
