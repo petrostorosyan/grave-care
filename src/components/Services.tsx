@@ -1,21 +1,11 @@
 import { useTranslations } from "next-intl";
 import SpotlightCard from "./SpotLightCard";
 import ScrollFloat from "./ScrollFloatText";
+import { services } from "@/data/servicesData";
 
 const Services = () => {
   const tCommon = useTranslations();
   const t = useTranslations("homePage.services");
-
-  const services = [
-    {
-      id: 1,
-      title: "cleaningMonuments.title",
-      desc: "cleaningMonuments.description",
-    },
-    { id: 2, title: "flowerCare.title", desc: "flowerCare.description" },
-    { id: 3, title: "weedRemoval.title", desc: "weedRemoval.description" },
-    { id: 4, title: "photoReport.title", desc: "photoReport.description" },
-  ];
 
   return (
     <section id="services" className="px-[50px] py-[30px] mb-[80px] text-center max-[650px]:p-[20px] max-[430px]:p-[15px] max-[430px]:mb-[65px]">

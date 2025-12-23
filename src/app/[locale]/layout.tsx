@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { AntdRegistry } from "@ant-design/nextjs-registry";
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { Suspense } from "react";
 import { Spin } from 'antd';
 import { Lora } from "next/font/google";

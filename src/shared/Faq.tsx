@@ -4,8 +4,8 @@ import ScrollFloat from "@/components/ScrollFloatText";
 import SpotlightCard from "@/components/SpotLightCard";
 import type { CollapseProps } from "antd";
 import { Collapse } from "antd";
-import { RightOutlined } from "@ant-design/icons";
 import { useTranslations } from "next-intl";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const itemTitleStyle =
   `w-[100%] flex text-white text-[18px] text-left transition-all duration-500 max-[800px]:text-[16px] max-[500px]:text-[14px] max-[430px]:text-[13px]`;
@@ -104,17 +104,15 @@ const Faq = () => {
               max-[1000px]:w-[100%] max-[600px]:p-[30px] max-[430px]:p-[20px]"
             >
               <Collapse
-                className="!w-full border !border-[#313236]"
+                className="!w-full border !border-[#313236] select-none"
                 accordion
                 items={items}
                 expandIcon={({ isActive }) => (
-                  <RightOutlined
-                    style={{
+                  <MdOutlineKeyboardArrowRight style={{
                       color: "white",
-                      fontSize: "14px",
+                      fontSize: "22px",
                       transform: isActive ? "rotate(90deg)" : "rotate(0deg)",
-                    }}
-                  />
+                    }} />
                 )}
               />
             </div>

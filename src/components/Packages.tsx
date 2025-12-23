@@ -2,13 +2,7 @@ import { useLocale, useTranslations } from "next-intl";
 import ScrollFloat from "./ScrollFloatText";
 import SpotlightCard from "./SpotLightCard";
 import { Button } from "antd";
-
-interface IPackage {
-  id: number;
-  title: string;
-  desc: string;
-  price: string;
-}
+import { packagesData } from "@/data/packagesData";
 
 const Packages = () => {
   const t = useTranslations("homePage.packages");
@@ -22,27 +16,6 @@ const Packages = () => {
   };
 
   const currentCurrency = currencyMap[locale] ?? "֏";
-
-  const packagesData: IPackage[] = [
-    {
-      id: 1,
-      title: "oneTimeVisit.title",
-      desc: "oneTimeVisit.description",
-      price: "20.000",
-    },
-    {
-      id: 2,
-      title: "monthlyCare.title",
-      price: "50.000",
-      desc: "monthlyCare.description",
-    },
-    {
-      id: 3,
-      title: "yearlyPackage.title",
-      price: "160.000",
-      desc: "yearlyPackage.description",
-    },
-  ];
 
   return (
     <div

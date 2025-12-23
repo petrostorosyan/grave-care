@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
 import LocaleSwitcher from "./LocaleSwitcher";
 import AuthButtons from "./AuthButtons";
 import Logo from "@/shared/Logo";
-import { PhoneOutlined } from "@ant-design/icons";
+import { FaPhone } from "react-icons/fa";
 import MobileMenu from "@/components/MobileMenu";
 import useScreenSize from "@/hooks/useScreenSize";
 
@@ -67,7 +67,8 @@ const Navigation = () => {
       {/* <AuthButtons /> */}
       <div className="w-[65px] items-center justify-between min-[780px]:flex max-[780px]:hidden">
         <a href="tel:+37477xxxxxx">
-          <PhoneOutlined className="text-[20px] hover:!text-[#c816fa] transition duration-500" />
+          {/* <PhoneOutlined className="text-[20px] hover:!text-[#c816fa] transition duration-500" /> */}
+          <FaPhone className="text-[18px] hover:!text-[#c816fa] transition duration-500" />
         </a>
         <LocaleSwitcher />
       </div>
